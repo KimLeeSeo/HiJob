@@ -1,0 +1,23 @@
+.bar{
+    width: 390px;
+    height: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
+}
+#_bar{
+    display: grid;
+    justify-items: center;
+    margin:auto;
+    text-decoration: none;
+    color:white;
+    font-size: 10px;
+}
+#_bar:visited{
+    text-decoration: none;
+}
+.icon{
+    width:24px;
+    height: 24px;
+    margin-bottom: 5px;
+}

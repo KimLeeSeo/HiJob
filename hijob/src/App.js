@@ -1,14 +1,25 @@
 import './App.css';
-import logo from './APP/logo.png';
+import {BrowserRouter, Route,Routes } from "react-router-dom";
+import FirstPage from './FirstPage';
+import Cummunity from './Cummunity';
+import Home from './Home';
+import MyPage from './MyPage';
+import Menu from './Menu';
+import Resume from './Resume';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="header">
-        <img src={logo} className='header-logo' alt='React' />
-        <div className="header-txt">세계인의 구직정보를 모아</div>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" Component={FirstPage}/>
+      <Route path="/menu" Component={Menu}/>
+      <Route path="/cummunity" Component={Cummunity}/>
+      <Route path="/home" Component={Home}/>
+      <Route path="/resume" Component={Resume} />
+      <Route path="/mypage" Component={MyPage}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
