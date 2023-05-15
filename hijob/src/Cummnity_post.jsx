@@ -14,6 +14,9 @@ function Cummunity_post(){
                  <div id="cummunity_button">커뮤니티</div>
                 </Link>
              </heaer>
+             <div className="menu_bar">
+                <MenuBar></MenuBar>
+            </div>
         </div>
         </>
         
