@@ -1,0 +1,35 @@
+#replies{
+    margin:10px 15px;
+}
+#reply_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25px;
+}
+#reply_name h4{
+    margin:0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#dots-horizontal{
+    width:25px;
+    height:25px;
+}
+#reply_contents_box{
+    margin:0px;
+    margin-top:3px;
+    font-size: 17px;
+    font-weight: normal;
+}
+#reply_info{
+    height: 25px;
+    float: left;
+    color:#aeaeae;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+#reply_time{
+    margin-left:5px;
+}

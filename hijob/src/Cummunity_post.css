@@ -7,7 +7,6 @@
 }
 #box{
     position: relative;
-
 }
 #arrow{
     position:absolute;
@@ -26,4 +25,11 @@
     width:76px;
     border: none;
     background-color: transparent;
+}
+#cummunity_datail_post{
+    position:absolute;
+    top:85px;
+    width:390px;
+    height: 712px;
+    overflow: auto;
 }

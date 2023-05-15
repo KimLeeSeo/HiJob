@@ -1,0 +1,83 @@
+
+#post_image{
+    width: 357px;
+    height: 200.81px;
+    margin-top:10px;
+    margin-left:15px;
+}
+#detail_post{
+    font-size: 17px;
+    font-weight: normal;
+    margin:10px 15px;
+}
+#like_container{
+    display: flex;
+    margin:15px;
+}
+#like_button{
+    width: 24px;
+    height: 24px;
+    color:#aeaeae;
+}
+#post_like{
+    color:#aeaeae;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left:10px;
+}
+#reply_container{
+    width: 390px;
+    height: 230px;
+    background-color: #d9d9d9;
+    position:relative;
+}
+#reply_input{
+    width: 357px;
+    height: 201px;
+    border-radius: 15px;
+    border: none;
+    margin: 14.5px;
+    margin-left:16.5px;
+    margin-right: 16.5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    font-size: 15px;
+    padding: none;
+}
+#reply_input::placeholder{
+    color:#d9d9d9;
+    font-size: 15px;
+    font-weight: normal;
+    text-indent: 5px;
+}
+#post_line{
+    position:absolute;
+    bottom:50px;
+    left:16px;
+}
+#post_submit_button{
+    position: absolute;
+    bottom:20px;
+    left:311px;
+    width:50px;
+    height:25px;
+    color:white;
+    background-color: #408FFF;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+}
+#reply_count{
+    display: flex;
+    margin:15px;
+}
+#chat_icon{
+    width:24px;
+    height:24px;
+}
+#post_chat{
+    color:#aeaeae;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left:10px;
+}
