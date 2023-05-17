@@ -3,6 +3,7 @@
     height: 853px;
     margin: 0 auto;
     position:relative;
+    z-index: 3;
 }
 #header_bar{
     width: 390px;

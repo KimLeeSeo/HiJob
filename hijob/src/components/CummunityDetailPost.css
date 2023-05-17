@@ -31,18 +31,20 @@
     background-color: #d9d9d9;
     position:relative;
 }
-#reply_input{
+#whitebox{
     width: 357px;
     height: 201px;
+    margin: 14.5px;
+    background-color: white;
     border-radius: 15px;
     border: none;
-    margin: 14.5px;
-    margin-left:16.5px;
-    margin-right: 16.5px;
-    padding-left: 5px;
-    padding-right: 0px;
+}
+#reply_input{
+    resize:none;
+    border:none;
     font-size: 15px;
     padding: none;
+    text-indent: 5px;
 }
 #reply_input::placeholder{
     color:#d9d9d9;

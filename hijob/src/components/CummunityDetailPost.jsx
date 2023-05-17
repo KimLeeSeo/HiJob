@@ -49,9 +49,11 @@ function CummunityDetailPost(){
                     </div>
 
                     <form id="reply_container">
-                    <textarea name="reply" form="reply_container" placeholder="광고성 글, 비방글 등은 사전 동의없이 삭제될 수 있습니다."  id="reply_input" rows="9"></textarea>
-                    <hr className="mainline" id="post_line"/>
-                    <input type="submit" id="post_submit_button" value="등록"></input>
+                        <div id="whitebox">
+                            <textarea name="reply" form="reply_container" placeholder="광고성 글, 비방글 등은 사전 동의없이 삭제될 수 있습니다."  id="reply_input" rows="9"></textarea>
+                        </div> 
+                       <hr className="mainline" id="post_line"/>
+                        <input type="submit" id="post_submit_button" value="등록"></input>
                     </form>
 
                     <div id="reply_count">
