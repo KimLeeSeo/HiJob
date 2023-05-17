@@ -17,7 +17,6 @@ function Cummunity(props){
         <>
         <div id="container">
              <header id="header_bar">
-                <img src={menuicon} id="menuicon"></img>
                 <img src={bell} id="bell"></img>
              </header>
             <div id="main_post_header">

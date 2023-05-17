@@ -4,10 +4,25 @@ import "./CummunityDetailPost.css"
 import chat from "../APP/chat-gray.png";
 import seventeen from "../APP/Seventeen.png";
 import heart from "../APP/heart.png";
+import redheart from "../APP/redheart.png";
 import Reply from "./Reply"
+import { useState } from "react";
 
 function CummunityDetailPost(){
     const location =useLocation();
+    const [imgSrc,setimgSrc]=useState(heart);
+    const [isClick,setisClick]=useState(false);
+
+    const ChangeColor=()=>{
+        if(isClick){
+            setimgSrc(redheart);
+            setisClick(false);
+        }else{
+            setimgSrc(heart);
+            setisClick(true);
+        }
+    }
+
     if(location.state){
         const title = location.state.title;
         const author = location.state.author;
@@ -36,16 +51,16 @@ function CummunityDetailPost(){
                 <div> 
                     <img src={seventeen}  id="post_image" alt="공고문 대표사진"/>
                     <div id="detail_post">
-                    <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
-                    <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
-                    <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
-                    <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
-                    <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
+                        <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
+                        <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
+                        <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
+                        <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
+                        <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>
                     </div>
                     <hr className="mainline"/>
                     <div id="like_container">
-                    <img src={heart} id="like_button" alt="좋아요"/>
-                    <span id="post_like">좋아요</span>
+                        <img src={imgSrc} id="like_button" alt="좋아요" onClick={ChangeColor}/>
+                        <span id="post_like">좋아요</span>
                     </div>
 
                     <form id="reply_container">
