@@ -48,7 +48,7 @@ function CummunityDetailPost(){
                     <hr className="mainline"/>
                 </div>
 
-                <div> 
+                <div id="detail_post_box"> 
                     <img src={seventeen}  id="post_image" alt="공고문 대표사진"/>
                     <div id="detail_post">
                         <p>Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중</p>

@@ -1,7 +1,6 @@
-import React,{useRef} from "react";
+import React from "react";
 import MenuBar from "./components/MenuBar";
 import SimplePost from "./components/CummunitySimplePost";
-import menuicon from "./APP/align-justify.png";
 import bell from "./APP/bell.png";
 import write from"./APP/write.png";
 import "./Cummunity.css";

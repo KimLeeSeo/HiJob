@@ -7,6 +7,9 @@
     margin-top:10px;
     margin-left:15px;
 }
+#detail_post_box{
+    width:390px;
+}
 #detail_post{
     font-size: 17px;
     font-weight: normal;
