@@ -8,8 +8,25 @@ import MyPage from './MyPage';
 import Menu from './Menu';
 import Resume from './Resume';
 import Write from './Write';
+import {parseString} from 'xml2js';
 
 function App() {
+  const url = "http://openapi.seoul.go.kr:8088/4d635141516a656f3131337278414b77/xml/GlobalJobSearch/1/5/";
+    fetch(url)
+    .then((res)=> res.text())
+    .then((resText)=>{
+        parseString(resText,(err,result)=>{
+            if(err !== null){
+                console.log("fail get data.");
+            }else{
+                console.log(result);
+            }
+        });
+    })
+    .catch((e)=>{
+        console.log("Error fetching the feed: ",e);
+    })
+    
   return (
     <BrowserRouter>
     <Routes>

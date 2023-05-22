@@ -5,13 +5,15 @@ import bell from "./APP/bell.png";
 import write from"./APP/write.png";
 import "./Cummunity.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState , useEffect } from "react";
+
 
 function Cummunity(props){
     const [isAllValid,setIsAllVaild] =useState();
     const SelectMenu=()=>{
         
     }
+    
     return(
         <>
         <div id="container">
@@ -28,6 +30,7 @@ function Cummunity(props){
             </div>
             <div id="cummunity_main_post">
                 <div id="cummunity_post_box">
+
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={2}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
