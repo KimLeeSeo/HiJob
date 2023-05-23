@@ -13,14 +13,9 @@
     z-index: 2;
     background-color: black;
 }
-#menuicon,#bell{
+#bell{
     width:25px;
     height:25px;
-}
-#menuicon{
-    position: absolute;
-    left: 15px;
-    top:45px;
 }
 #bell{
     position:absolute;
@@ -65,7 +60,7 @@
     top:140px;
 }
 #cummunity_post_box{
-    height:660px;
+    height:600px;
     overflow: auto;
 }
 #container_writing_button{

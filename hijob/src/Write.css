@@ -1,23 +1,64 @@
+
+#new_post_container{
+    position:relative;
+    overflow: auto;
+    top:85px;
+    width:390px;
+    height:832px;
+}
 #title_line{
     width: 352px;
     height: 1px;
     padding-left: 19px;
+    margin:0px;
 }
 #new_post{
-    position: fixed;
-    background-color: white;
-    height: 768px;
-    top:85px;
+    position: absolute;
     width:390px;
+    height:747px;
+}
+#new_post_title{
+    margin-top:10px;
+    margin-left:19px;
+    width:340px;
+    height:30px;
+    padding: 5px;
+    font-size: 20px;
+    border:none;
+}
+#new_post_title:focus{
+    outline:none;
+}
+#new_post_title::placeholder{
+    font-size:20px;
+    color:#aeaeae;
+}
+#new_post_content{
+    font-size: 20px;
+    width: 340px;
+    height: 600px;
+    resize: none;
+    margin-left:19px;
+    margin-top: 10px;
+    padding:5px;
+    border: none;
+}
+#new_post_content:focus{
+    outline: none;
+}
+#new_post_content::placeholder{
+    font-size:20px;
+    color:#aeaeae;
 }
 #submit_new_post{
-    position: absolute;
+    position: fixed;
     width: 390px;
     height: 56px;
-    top:797px;
     border: none;
     color: white;
     background-color: #408FFF;
-    font: 17px;
+    font-size: 17px;
     font-weight: bold;
+    left:0px;
+    bottom:0px;
 }
