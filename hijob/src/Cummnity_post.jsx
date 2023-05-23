@@ -1,12 +1,9 @@
-import React, { useDeferredValue } from "react";
+import React from "react";
 import MenuBar from "./components/MenuBar";
 import "./Cummunity_post.css";
 import { Link } from "react-router-dom";
 import arrow from "./APP/arrow-prev.png";
-import chat from "./APP/chat-writing.png";
 import CummunityDetailPost from "./components/CummunityDetailPost";
-import seventeen from "./APP/Seventeen.png";
-import heart from "./APP/heart.png";
 
 function Cummunity_post(){
     return(
@@ -20,7 +17,7 @@ function Cummunity_post(){
              </heaer>
 
             <div id="cummunity_datail_post"> 
-                 <CummunityDetailPost/>
+                    <CummunityDetailPost/>
             </div>
             
             <div className="menu_bar">
