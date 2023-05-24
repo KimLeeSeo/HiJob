@@ -8,31 +8,14 @@ import MyPage from './MyPage';
 import Menu from './Menu';
 import Resume from './Resume';
 import Write from './Write';
-import {parseString} from 'xml2js';
 
 function App() {
-  const url = "http://openapi.seoul.go.kr:8088/4d635141516a656f3131337278414b77/xml/GlobalJobSearch/1/5/";
-    fetch(url)
-    .then((res)=> res.text())
-    .then((resText)=>{
-        parseString(resText,(err,result)=>{
-            if(err !== null){
-                console.log("fail get data.");
-            }else{
-                console.log(result);
-            }
-        });
-    })
-    .catch((e)=>{
-        console.log("Error fetching the feed: ",e);
-    })
-    
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" Component={FirstPage}/>
       <Route path="/menu" Component={Menu}/>
-      <Route path="/cummunity" Component={Cummunity}/>
+      <Route path="/cummunity" Component={Cummunity} globalData ={global.GlobalJobSerach} />
       <Route path="/cummunity_post" Component={Cummunity_post}/>
       <Route path="/new_post" Component={Write}/>
       <Route path="/home" Component={Home}/>

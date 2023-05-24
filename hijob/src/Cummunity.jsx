@@ -6,14 +6,36 @@ import write from"./APP/write.png";
 import "./Cummunity.css";
 import { Link } from "react-router-dom";
 import { useState , useEffect } from "react";
+import {parseString} from 'xml2js';
 
 
-function Cummunity(props){
+function Cummunity(){
     const [isAllValid,setIsAllVaild] =useState();
     const SelectMenu=()=>{
         
     }
-    
+
+    const [global,setGlobal] = useState([]);
+    useEffect(()=>{
+      const url = "http://openapi.seoul.go.kr:8088/4d635141516a656f3131337278414b77/xml/GlobalJobSearch/1/5/";
+      fetch(url)
+      .then((res)=> res.text())
+      .then((resText)=>{
+          parseString(resText,(err,result)=>{
+              if(err !== null){
+                  console.log("fail get data.");
+              }else{
+                  setGlobal(result);
+              }
+          });
+      })
+      .catch((e)=>{
+          console.log("Error fetching the feed: ",e);
+      });
+  },[]);
+
+    console.log(global);
+
     return(
         <>
         <div id="container">
@@ -30,7 +52,6 @@ function Cummunity(props){
             </div>
             <div id="cummunity_main_post">
                 <div id="cummunity_post_box">
-
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={2}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>

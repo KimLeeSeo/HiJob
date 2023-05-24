@@ -2,8 +2,9 @@ import React from "react";
 import "./CummunitySimplePost.css";
 import { Link } from "react-router-dom";
 
+
 function SimplePost({title,author,time,count,like,reply}){
-    
+   
     return(
         <>
         <Link to="/cummunity_post" state={{title,author,time,count,like,reply}} style={{textDecoration:"none", color:"black"}}>
