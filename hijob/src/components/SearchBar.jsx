@@ -7,12 +7,13 @@ import search from "../APP/search.png";
 function SearchBar(){
     const [search_data, setSearch] = useState("");
     
-    /*const onChangeSearch = (e) => {
+    const onChangeSearch = (e) => {
         e.preventDefault();
         setSearch(e.target.value);
-    };  onChange={{onChangeSearch}}*/
+        console.log(search_data);
+    };
     
-    console.log(search);
+    
 
     return( 
         <div className="Sbar">
@@ -20,7 +21,8 @@ function SearchBar(){
             
             <div className="searchbox">
                 <img src={search} alt="검색" className="search_icon"/>
-                <input type="text" value={search_data} placeholder="검색어를 입력하세요." />
+                <input type="text" value={search_data} placeholder="검색어를 입력하세요." onChange={onChangeSearch}/>
+                <button onClick={onChangeSearch}/>
             </div> 
         </div>
     )
