@@ -1,72 +1,40 @@
 import React from "react";
-import styled from "styled-components";
-import logo_login from "../APP/logo_login.png";
+import "./Login.css";
+//import styled from "styled-components";
+import logo_login from "./APP/logo2.png";
+import { Link } from "react-router-dom";
 
-export default function login() {
+export default function Login() {
   return (
-    <Container>
-      <Logo>
-        <img src={logo_login} alt="React" />
-      </Logo>
-      <LoginContainer>
+    <div className="containerLogin">
+      <div className="logo">
+        <img src={logo_login} alt="logo" />
+        <div className="logo_text">세계인의 구직정보를 모아</div>
+      </div>
+      <div className="login_container">
         <form>
-          <Login_input_warp>
-            <div>
-              <input placeholder="Enter email i'd" type="text" />
-            </div>
-          </Login_input_warp>
-          <Login_input_warp>
-            <div>
-              <input
-                placeholder="Enter password"
-                type="password"
-                autoComplete="off"
-              />
-            </div>
-          </Login_input_warp>
+          <div className="login_input_wrap">
+            <input placeholder="Enter email" type="text" />
+          </div>
+          <div className="login_input_wrap">
+            <input
+              placeholder="Enter password"
+              type="password"
+              autoComplete="off"
+            />
+          </div>
         </form>
-      </LoginContainer>
-    </Container>
+        <div className="pwd_search">Forget Password?</div>
+      </div>
+      <Link to="/home" className="button_div_login">
+        <button>Login</button>
+      </Link>
+      <div className="create_account">
+        Not register yet?
+        <Link className="signupLink" to="/signup">
+          Create Account
+        </Link>
+      </div>
+    </div>
   );
 }
-
-const Container = styled.div`
-  width: 390px;
-  height: 853px;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid black;
-`;
-
-const Logo = styled.div`
-  height: 45%;
-  position: relative;
-  display: block;
-  align-items: center;
-
-  img {
-    padding: 60% 0 0 0;
-    width: 80%;
-    margin: auto;
-    display: block;
-  }
-`;
-
-const LoginContainer = styled.div`
-  border: 1px solid black;
-  margin: 0 auto;
-  width: 90%;
-`;
-
-const Login_input_warp = styled.div`
-  &:first-of-type {
-    margin-bottom: 5px;
-  }
-  padding-bottom: 5px;
-
-  input {
-    height: 40px;
-    font-size: 16px;
-    width: 90%;
-  }
-`;

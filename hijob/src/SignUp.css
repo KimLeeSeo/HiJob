@@ -1,0 +1,211 @@
+.containerSignup {
+  width: 390px;
+  height: 853px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.header_signup {
+  position: static;
+  height: 85px;
+  width: 391px;
+  top: 0px;
+}
+
+.toPrevPage {
+  position: relative;
+  top: 50%;
+  display: inline-flex;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.toPrevPage img {
+  width: 24px;
+  height: 22.67px;
+  left: 9px;
+  top: 51.94px;
+  margin: auto;
+}
+
+.line_div {
+  position: static;
+  margin: 18px;
+  /*border: 1px solid yellow;*/
+  display: inline-flex;
+}
+.line_1 {
+  width: 175.62px;
+  height: 2px;
+  background-color: #408fff;
+  margin-right: 6.75px;
+}
+.line_2 {
+  width: 175.62px;
+  height: 2px;
+  background-color: #1d304b;
+}
+
+.form_su {
+  margin: 20px;
+}
+
+.from_text_title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-top: 17px;
+}
+
+.from_text_title:first-of-type {
+  margin-top: 0px;
+}
+
+.form_text {
+  position: relative;
+  margin-top: 4.35px;
+  height: 52.2px;
+  width: 349px;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+.form_text_input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 16px auto 16px 0px;
+  padding-left: 16px;
+  font-size: 14px;
+  border: none;
+}
+
+.form_pwd {
+  position: relative;
+  margin-top: 4.35px;
+  height: 52.2px;
+  width: 349px;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+.form_input_pwd {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 16px auto 16px 0px;
+  padding-left: 16px;
+  font-size: 14px;
+  border: none;
+}
+
+.visiblePNG {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 90%;
+  top: 16px;
+}
+.checkbox_signup {
+  margin: 46px 26px 16px 20px;
+}
+
+.checkbox_div {
+  margin-bottom: 69px;
+}
+
+.checkbox_div:first-of-type {
+  margin-bottom: 30px;
+}
+
+.checkbox_signup label {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.createBtn {
+  width: 348px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #408fff;
+  display: block;
+  margin: auto;
+  border: none;
+  color: #f2fff4;
+  font-size: 14px;
+  font-weight: 400;
+}
+.have_account {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.have_account p {
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.Link_login {
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+/*-----------signUp2-------------*/
+.image_div {
+  position: relative;
+  width: 130px;
+  height: 120px;
+  margin: auto;
+}
+.userIconPNG {
+  width: 119px;
+  height: 119px;
+  color: #ffffff;
+  filter: invert(100%);
+  margin: auto;
+  display: block;
+}
+.imgSelectPNG {
+  width: 38.08px;
+  height: 38.08px;
+}
+.input_img {
+  display: none;
+}
+.image_iabel {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.selectBox {
+  .select {
+    padding: 8px 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+.selectTitle {
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.select_country {
+  padding: 8px 20px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+}
