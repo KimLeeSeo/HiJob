@@ -1,9 +1,9 @@
 import React, { useDeferredValue } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import axios from 'axios';
+import { Router } from "react-router-dom";
 
-
+import List from "./components/List";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,7 +15,7 @@ import MenuBar from "./components/MenuBar";
 import SearchBar from "./components/SearchBar";
 import testimg from "./APP/testimage.png";
 import jjang from "./APP/jjang.png";
-import { Router } from "react-router-dom";
+
 
 function Home(){
     
@@ -41,31 +41,13 @@ function Home(){
                 
                 <h1>추천공고</h1>
                 <hr className="mainline"/>
-                <div className="box">
-                    <h2>영상제작 크류</h2>
-                    <h3>마감일 2023.05.12.<br/>조회수 1234</h3>
-                </div>
-                <hr className="mainline"/>
-                <div className="box">
-                    <h2>영상제작 크루 모집</h2>
-                    <h3>마감일 2023.05.12.<br/>조회수 1234</h3>
-                </div>
+                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
             </div>
 
             <img src={jjang} alt="광고이미지" className="ad_img"/> 
-
-            <div className="main_content">
-                <div className="box">
-                    <h2>영상제작 크루 모집</h2>
-                    <h3>마감일 2023.05.12.<br/>조회수 1234</h3>
-                </div>
-                <hr className="mainline"/>
-                <div className="box">
-                    <h2>영상제작 크루 모집</h2>
-                    <h3>마감일 2023.05.12.<br/>조회수 1234</h3>
-                </div>
-            </div>
-
 
             <div className="menu_bar">
                 <MenuBar></MenuBar>
