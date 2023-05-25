@@ -11,6 +11,7 @@ import Write from "./Write";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import SignUp2 from "./SignUp_2";
+import Search_result from "./Search_result";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={SignUp} />
         <Route path="/signup2" Component={SignUp2} />
+        <Route path="/Search_result" Component={Search_result} />
       </Routes>
     </BrowserRouter>
   );

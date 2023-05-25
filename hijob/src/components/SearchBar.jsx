@@ -22,7 +22,7 @@ function SearchBar(){
             <div className="searchbox">
                 <img src={search} alt="검색" className="search_icon"/>
                 <input type="text" value={search_data} placeholder="검색어를 입력하세요." onChange={onChangeSearch}/>
-                <button onClick={onChangeSearch}/>
+                <button className="search_btn" onClick={onChangeSearch}>검색</button>
             </div> 
         </div>
     )
