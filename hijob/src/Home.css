@@ -47,6 +47,7 @@
 }
 
 .main_content{
+    height: fit-content;
     position: relative;
     overflow: hidden;
 }
