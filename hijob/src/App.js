@@ -13,6 +13,10 @@ import SignUp from "./SignUp";
 import SignUp2 from "./SignUp_2";
 import Search_result from "./Search_result";
 
+
+
+
+
 function App() {
   return (
     <BrowserRouter>
