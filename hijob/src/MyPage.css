@@ -1,0 +1,157 @@
+#container_mypage {
+  width: 390px;
+  height: 853px;
+  margin: 0 auto;
+  z-index: 3;
+  border: 1px solid black;
+}
+
+#header_bar_mypage {
+  width: 390px;
+  height: 85px;
+  position: relative;
+  top: 0px;
+  z-index: 2;
+  background-color: black;
+  display: block;
+}
+
+.block_1 {
+  height: 181px;
+  display: block;
+}
+
+.block_1_1 {
+  display: flex;
+  margin-top: 17px;
+  align-items: center;
+}
+
+.userIconPNG_mypage {
+  width: 58px;
+  height: 58px;
+  float: left;
+  margin-left: 5px;
+  /*margin: 17px 5px 16px auto;*/
+}
+
+.block_1_text {
+  width: 242px;
+  height: 34px;
+  font-size: 20px;
+  font-weight: 700;
+  float: left;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+.setting_block1 {
+  width: 85px;
+  float: left;
+}
+.block_1_setting {
+  width: 35px;
+  height: 25px;
+  border-radius: 30px;
+  background-color: #f2eee9;
+  display: flex;
+  margin-left: 16px;
+}
+
+.setting-icon {
+  width: 18.33px;
+  height: 18.33px;
+  margin: auto;
+  text-align: center;
+}
+
+.block_1_2 {
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+.btn_block {
+  width: 98px;
+  height: 75.17px;
+  border-radius: 20px;
+  background-color: #f2eee9;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.btn_block_img_1 {
+  width: 30px;
+  height: 36.67px;
+  margin-top: 10px;
+}
+
+.btn_block_img_2 {
+  width: 36.67px;
+  height: 36.67px;
+  margin-top: 10px;
+}
+.btn_block_img_3 {
+  width: 30px;
+  height: 36.67px;
+  margin-top: 10px;
+}
+
+.btn_block_div_1 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.line_mypage {
+  height: 7px;
+  background-color: #f2eee9;
+}
+
+.block_2 {
+  height: 100px;
+}
+
+.block_2_text_1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 17px;
+  margin: 7px;
+}
+.block_2_text_2 {
+  display: flex;
+  margin-bottom: 7px;
+}
+.text_2_div1 {
+  font-size: 19px;
+  font-weight: 500;
+  float: left;
+  margin-left: 17px;
+}
+
+.text_2_div2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #c13512;
+  float: left;
+  margin-left: 25px;
+}
+
+.block_3 {
+  margin-top: 15px;
+  margin-left: 18px;
+}
+
+.block_3_div {
+  display: flex;
+  margin-bottom: 15px;
+}
+.block3_img1 {
+  float: left;
+}
+
+.block3_text {
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 10px;
+}
