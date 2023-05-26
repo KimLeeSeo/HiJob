@@ -11,11 +11,9 @@ import { Outlet } from "react-router-dom";
 function MenuBar(){
     return( 
         <div className="bar"> 
-            <Link to="/menu" id="_bar"><img src={menu} alt="메뉴" className="icon"/>메뉴</Link>
-            <Link to="/cummunity" id="_bar"><img src={chat_writing} alt="커뮤니티" className="icon"/>커뮤니티</Link>
-            <Link to="/home" id="_bar"><img src={home} alt="홈" className="icon"/>홈</Link>
-            <Link to="/resume" id="_bar"><img src={document} alt="이력서" className="icon"/>이력서</Link>
-            <Link to="/mypage" id="_bar"><img src={user} alt="마이페이지" className="icon"/>마이페이지</Link>
+            <Link to="/cummunity" id="_bar"><img src={chat_writing} alt="커뮤니티" className="icon"/></Link>
+            <Link to="/home" id="_bar"><img src={home} alt="홈" className="icon"/></Link>
+            <Link to="/mypage" id="_bar"><img src={user} alt="마이페이지" className="icon"/></Link>
         </div>
     )
 }

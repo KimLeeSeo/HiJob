@@ -2,6 +2,8 @@ import React, { useDeferredValue } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Router } from "react-router-dom";
+import { firestore } from './firebase';
+import { useEffect } from 'react';
 
 import List from "./components/List";
 
@@ -17,7 +19,22 @@ import testimg from "./APP/testimage.png";
 import jjang from "./APP/jjang.png";
 
 
+
 function Home(){
+
+    useEffect(() => {
+        // bucket이라는 변수로 firestore의 collection인 bucket에 접근
+        const bucket = firestore.collection("User");
+    
+        // collection의 document인 "bucket_item"을 가져온다.
+        bucket.doc("apple").get().then((doc) => {
+          // document의 데이터를 가져옴
+          console.log(doc.data());
+        });
+      });
+    
+    
+    
     
     return(
         <div className="body">
@@ -48,6 +65,10 @@ function Home(){
             </div>
 
             <img src={jjang} alt="광고이미지" className="ad_img"/> 
+            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
 
             <div className="menu_bar">
                 <MenuBar></MenuBar>
