@@ -2,6 +2,7 @@ import React from 'react'
 import './Search_result.css'
 import heart from "./APP/heart.png";
 import redheart from "./APP/redheart.png";
+import whbell from "./APP/bell.png";
 import { useLocation } from 'react-router-dom';
 
 import { useState } from "react";
@@ -28,13 +29,28 @@ export default function Search_result() {
     return (
     <div className='search_body'>
       <div className='result_header'>
-
+        <img src={whbell} className='bell_icon' id="bell_button"/>
       </div>
       <div className='result_content'>
         <h1>
           {title}
         </h1>
         <hr/>
+        
+        <h2>
+          공고일
+        </h2>
+        <h3>
+          2023. 05.06.
+        </h3>
+
+        <h2>
+          작성자명
+        </h2>
+        <h3>
+          서은서
+        </h3>
+        
         <h2>
           [모집요강]
         </h2>
