@@ -12,6 +12,9 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import SignUp2 from "./SignUp_2";
 import Search_result from "./Search_result";
+import Search from "./Search";
+
+function App() {
 import axios from "axios";
 import {useState, useEffect } from "react";
 
@@ -26,7 +29,6 @@ function App() {
       await readJobdata();
     })();
   },[]);
-
 
   return (
     <BrowserRouter>
@@ -47,6 +49,8 @@ function App() {
         <Route path="/signup" Component={SignUp} />
         <Route path="/signup2" Component={SignUp2} />
         <Route path="/Search_result" Component={Search_result} />
+        <Route path="/search" Component={Search}/>
+        
       </Routes>
     </BrowserRouter>
   );

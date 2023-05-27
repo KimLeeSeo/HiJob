@@ -22,12 +22,6 @@ function Cummunity(){
     useEffect(() => {
         const fetchUserData = async () => {
           try {
-            /*const commu = firestore.collection("Community");
-            commu.doc("EWmXi6nImjNBltrxsnzH").get().then((doc) => {
-            console.log(doc.data());
-            });*/
-
-            // 사용자 문서 가져오기
             const userDoc = await firestore.collection('Community').doc('EWmXi6nImjNBltrxsnzH').get();
             setUser(userDoc.data());
 
