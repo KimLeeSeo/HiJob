@@ -14,7 +14,6 @@ import SignUp2 from "./SignUp_2";
 import Search_result from "./Search_result";
 import Search from "./Search";
 
-function App() {
 import axios from "axios";
 import {useState, useEffect } from "react";
 
