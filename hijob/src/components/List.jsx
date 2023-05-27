@@ -3,10 +3,10 @@ import "./CummunitySimplePost.css";
 import "./List.css";
 import { Link } from "react-router-dom";
 
-function List({title,author,time,count,like}){
+function List({title,author,time,count,like,content}){
     return(
         <>
-        <Link to="/Search_result" state={{title,author,time,count,like}} style={{textDecoration:"none", color:"black"}}>
+        <Link to="/Search_result" state={{title,author,time,count,like,content}} style={{textDecoration:"none", color:"black"}}>
             <div className="list_container">
                 <div id="list_box">
                     <div id="title">{title}</div>

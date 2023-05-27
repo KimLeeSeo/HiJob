@@ -64,6 +64,7 @@ function Home(){
                         time={item.REG_DT[0]}
                         count={3}
                         like={19}
+                        content={item.CONT[0]}
                      />
                 ))}
                 
