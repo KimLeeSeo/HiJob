@@ -19,16 +19,19 @@
 }
 
 .result_content{
-    width: 390px;
+    width: 380px;
     height:fit-content;
-    background-color: aquamarine;
+    background-color: whitesmoke;
+    padding: 0px 5px;
+    padding-top:10px;
 }
 
 .result_content h1{
     font-style: normal;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 24px;
     line-height: 29px;
+    margin:0px;
 }
 
 .result_content h2{
@@ -45,7 +48,9 @@
     line-height: 19px;
 }
 
-
+#search_result_content{
+   
+}
 
 .like_bar{
     width: 100px;
