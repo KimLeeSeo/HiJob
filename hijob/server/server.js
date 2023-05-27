@@ -35,7 +35,8 @@ app.get('/api/jobdata', (req, res) => {
     if (err) {
       res.status(500).send('Error fetching data.');
     } else {
-      res.json(result);
+      const jsonData = JSON.parse(result);
+      res.json(jsonData);
     }
   });
 });
