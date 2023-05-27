@@ -21,21 +21,7 @@ import jjang from "./APP/jjang.png";
 
 
 function Home(){
-
-    useEffect(() => {
-        // bucket이라는 변수로 firestore의 collection인 bucket에 접근
-        const bucket = firestore.collection("User");
-    
-        // collection의 document인 "bucket_item"을 가져온다.
-        bucket.doc("apple").get().then((doc) => {
-          // document의 데이터를 가져옴
-          console.log(doc.data());
-        });
-      });
-    
-    
-    
-    
+  
     return(
         <div className="body">
             <div className="search">
