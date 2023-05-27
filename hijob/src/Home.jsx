@@ -3,8 +3,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Router } from "react-router-dom";
 import { firestore } from './firebase';
-import { useEffect } from 'react';
-
+import axios from "axios";
+import { useEffect,useState } from 'react';
 import List from "./components/List";
 
 import 'swiper/css';
@@ -21,7 +21,20 @@ import jjang from "./APP/jjang.png";
 
 
 function Home(){
-  
+    const [jobdata,setJobdata] = useState([]);
+    const [data,setData] = useState([]);
+    const readJobdata = async() =>{
+    const {data} = await axios.get("http://localhost:4000/api/jobdata");
+    setJobdata(data);
+    setData(data.GlobalJobSearch.row);
+    };
+    useEffect(()=>{
+    (async()=>{
+      await readJobdata();
+    })();
+     },[]);
+
+
     return(
         <div className="body">
             <div className="search">
@@ -44,17 +57,19 @@ function Home(){
                 
                 <h1>추천공고</h1>
                 <hr className="mainline"/>
-                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-                <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
+                {data.map((item) => (
+                    <List
+                        title={item.TITL_NM[0]}
+                        author={item.WRIT_NM[0]}
+                        time={item.REG_DT[0]}
+                        count={3}
+                        like={19}
+                     />
+                ))}
+                
             </div>
 
             <img src={jjang} alt="광고이미지" className="ad_img"/> 
-            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-            <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
 
             <div className="menu_bar">
                 <MenuBar></MenuBar>

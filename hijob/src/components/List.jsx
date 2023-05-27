@@ -9,9 +9,9 @@ function List({title,author,time,count,like}){
         <Link to="/Search_result" state={{title,author,time,count,like}} style={{textDecoration:"none", color:"black"}}>
             <div className="list_container">
                 <div id="list_box">
-                    <h2>{title}</h2>
-                    <div><span id="list_author">{author}</span> <span id="list_time">{time} </span></div>
-                    <div><span id="list_count">조회수 {count} </span><span id="list_like">추천수 {like}</span></div>
+                    <div id="title">{title}</div>
+                    <div id="small_box1"><span id="list_author">작성자:{author}</span> <span id="list_time">마감기한:{time} </span></div>
+                    <div id="small_box2"><span id="list_count">조회수:{count} </span><span id="list_like">추천수:{like}</span></div>
                 </div>
             </div> 
         </Link>
