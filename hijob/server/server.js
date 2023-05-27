@@ -2,10 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { parseString } = require('xml2js');
 const fetch = require('node-fetch');
+const cors = require('cors');
+
 
 const app = express();
 const port = 4000;
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const fetchData = (callback) => {
@@ -35,7 +38,8 @@ app.get('/api/jobdata', (req, res) => {
     if (err) {
       res.status(500).send('Error fetching data.');
     } else {
-      res.json(result);
+      const jsonData = JSON.parse(result);
+      res.json(jsonData);
     }
   });
 });

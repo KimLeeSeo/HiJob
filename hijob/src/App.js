@@ -12,12 +12,22 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import SignUp2 from "./SignUp_2";
 import Search_result from "./Search_result";
-
-
-
-
+import axios from "axios";
+import {useState, useEffect } from "react";
 
 function App() {
+  const [jobdata,setJobdata] = useState([]);
+  const readJobdata = async() =>{
+    const {data} = await axios.get("http://localhost:4000/api/jobdata");
+    setJobdata(data);
+  };
+  useEffect(()=>{
+    (async()=>{
+      await readJobdata();
+    })();
+  },[]);
+
+
   return (
     <BrowserRouter>
       <Routes>

@@ -5,8 +5,7 @@ import bell from "./APP/bell.png";
 import write from"./APP/write.png";
 import "./Cummunity.css";
 import { Link } from "react-router-dom";
-import { useState , useEffect } from "react";
-import {parseString} from 'xml2js';
+import { useState } from "react";
 
 import { firestore } from './firebase';
 
