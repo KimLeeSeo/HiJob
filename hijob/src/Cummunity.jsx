@@ -34,28 +34,6 @@ function Cummunity(){
         fetchUserData();
       }, []);
     
-      
-    const [global,setGlobal] = useState([]);
-    useEffect(()=>{
-      const url = "http://openapi.seoul.go.kr:8088/4d635141516a656f3131337278414b77/xml/GlobalJobSearch/1/5/";
-      fetch(url)
-      .then((res)=> res.text())
-      .then((resText)=>{
-          parseString(resText,(err,result)=>{
-              if(err !== null){
-                  console.log("fail get data.");
-              }else{
-                  setGlobal(result);
-              }
-          });
-      })
-      .catch((e)=>{
-          console.log("Error fetching the feed: ",e);
-      });
-  },[]);
-
-    console.log(global);
-
     return(
         <>
         <div id="container">
