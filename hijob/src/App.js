@@ -19,16 +19,18 @@ import {useState, useEffect } from "react";
 
 function App() {
   const [jobdata,setJobdata] = useState([]);
+  const [data,setData] = useState([]);
   const readJobdata = async() =>{
     const {data} = await axios.get("http://localhost:4000/api/jobdata");
     setJobdata(data);
+    setData(data.GlobalJobSearch.row);
   };
   useEffect(()=>{
     (async()=>{
       await readJobdata();
     })();
   },[]);
-
+ 
   return (
     <BrowserRouter>
       <Routes>
