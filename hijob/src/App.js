@@ -43,7 +43,7 @@ function App() {
         />
         <Route path="/cummunity_post" Component={Cummunity_post} />
         <Route path="/new_post" Component={Write} />
-        <Route path="/home" Component={Home} />
+        <Route path="/home" Component={Home} data={data}/>
         <Route path="/resume" Component={Resume} />
         <Route path="/mypage" Component={MyPage} />
         <Route path="/login" Component={Login} />

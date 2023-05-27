@@ -1,21 +1,40 @@
+#title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
 .list_container{
     width:390px;
-    height:80px;
+    height:100px;
     display: grid;
     grid-template-columns: 4fr 1fr;
     margin: 10px auto;
+    overflow :hidden;
 }
-
+#small_box1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#small_box2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 #list_box{
-    margin:0px 0px 0px 20px;
+    margin:0px;
+    width: 390px;
+    margin-left:20px;
 }
 #list_box h2{
     font-size: 22px;
     margin: 6px 0px;
 }
 
-#lost_author #list_time #list_count #list_like{
-    font-size: 15px;
+#lost_author #list_time {
+    font-size: 8px;
     font-weight: normal;
 }
-
+#list_count #list_like{
+    font-size: 3px;
+    font-weight: lighter;
+}
