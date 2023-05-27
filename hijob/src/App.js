@@ -26,7 +26,7 @@ function App() {
       await readJobdata();
     })();
   },[]);
-
+  
 
   return (
     <BrowserRouter>
