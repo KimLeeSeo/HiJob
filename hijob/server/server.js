@@ -2,10 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { parseString } = require('xml2js');
 const fetch = require('node-fetch');
+const cors = require('cors');
+
 
 const app = express();
 const port = 4000;
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const fetchData = (callback) => {
