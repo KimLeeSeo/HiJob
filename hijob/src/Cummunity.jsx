@@ -5,10 +5,9 @@ import bell from "./APP/bell.png";
 import write from"./APP/write.png";
 import "./Cummunity.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 import { firestore } from './firebase';
-
 
 function Cummunity(){
     const [isAllValid,setIsAllVaild] =useState();
@@ -18,11 +17,10 @@ function Cummunity(){
 
     const [user, setUser] = useState([]);
 
-
     useEffect(() => {
         const fetchUserData = async () => {
           try {
-            const userDoc = await firestore.collection('Community').doc('EWmXi6nImjNBltrxsnzH').get();
+            const userDoc = await firestore.collection('Community').doc("test").get();
             setUser(userDoc.data());
 
             console.log(user);
@@ -33,6 +31,12 @@ function Cummunity(){
     
         fetchUserData();
       }, []);
+
+
+     
+
+
+
     
     return(
         <>
