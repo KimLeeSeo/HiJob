@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { useState , useEffect } from "react";
 import {parseString} from 'xml2js';
 
+import { firestore } from './firebase';
+
 
 function Cummunity(){
     const [isAllValid,setIsAllVaild] =useState();
@@ -15,6 +17,31 @@ function Cummunity(){
         
     }
 
+    const [user, setUser] = useState([]);
+
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+          try {
+            /*const commu = firestore.collection("Community");
+            commu.doc("EWmXi6nImjNBltrxsnzH").get().then((doc) => {
+            console.log(doc.data());
+            });*/
+
+            // 사용자 문서 가져오기
+            const userDoc = await firestore.collection('Community').doc('EWmXi6nImjNBltrxsnzH').get();
+            setUser(userDoc.data());
+
+            console.log(user);
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }
+        };
+    
+        fetchUserData();
+      }, []);
+    
+      
     const [global,setGlobal] = useState([]);
     useEffect(()=>{
       const url = "http://openapi.seoul.go.kr:8088/4d635141516a656f3131337278414b77/xml/GlobalJobSearch/1/5/";
@@ -52,7 +79,7 @@ function Cummunity(){
             </div>
             <div id="cummunity_main_post">
                 <div id="cummunity_post_box">
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={2}/>
+                    <SimplePost title={user.name} author={"익명"} time={"15:43"} count={user.count} like={user.like} reply={user.reply}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
                     <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
