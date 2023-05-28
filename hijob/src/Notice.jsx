@@ -3,14 +3,14 @@ import MenuBar from "./components/MenuBar";
 import SimplePost from "./components/CummunitySimplePost";
 import bell from "./APP/bell.png";
 import write from"./APP/write.png";
-import "./Cummunity.css";
+import "./Notice.css";
 import { Link } from "react-router-dom";
 import { useState , useEffect} from "react";
 
 import { firestore } from './firebase';
 import firebase from "firebase/compat/app"
 
-function Cummunity(){
+function Notice(){
     const [isAllValid,setIsAllVaild] =useState();
     const SelectMenu=()=>{
         
@@ -45,9 +45,9 @@ function Cummunity(){
              </header>
             <div id="main_post_header">
                 <ul id="main_post_list">
-                    <Link to="/cummunity" className="link"><li className="bold" onClick={SelectMenu}>전체글</li></Link>
+                    <Link to="/cummunity" className="link"><li className="" onClick={SelectMenu}>전체글</li></Link>
                     <Link to="/most_post" className="link"><li className =""  onClick={SelectMenu}>인기글</li></Link>
-                    <Link to="/notice" className="link"><li className ="" onClick={SelectMenu}>공지</li></Link>
+                    <Link to="/notice" className="link"><li className ="bold" onClick={SelectMenu}>공지</li></Link>
                 </ul>
                 <Link to="/new_post"><img src={write} id="write"/></Link>
             </div>
@@ -80,4 +80,4 @@ function Cummunity(){
     )
 }
 
-export default Cummunity;
+export default Notice;
