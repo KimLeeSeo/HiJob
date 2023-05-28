@@ -35,7 +35,11 @@
     list-style: none;
     padding:0;
 }
-#main_post_list>li{
+.link:link,.link:visited,link:hover{
+    text-decoration: none;
+}
+.link{
+    color : black;
     float: left;
     font: 17px;
     padding-left:11px;
