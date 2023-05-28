@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import arrow from "./APP/arrow-prev.png";
 import { useState , useEffect} from "react";
 
+import firebase from "firebase/compat/app"
 import { firestore } from './firebase';
 import { getDatabase, ref, set } from "firebase/database";
 
@@ -14,8 +15,10 @@ function Write(){
     const [content,setContent] = useState("");
     
     const onChangeTitle = (e) => {
+        e.stopPropagation()
         e.preventDefault();
         setName(e.target.value);
+        console.log(name);
     };
     const onChangeContent = (e) => {
         e.preventDefault();
@@ -25,7 +28,7 @@ function Write(){
     const commu = firestore.collection("Community");
 
     const writeUserData=() => {
-        commu.doc("test").set({
+        commu.add({
             name: name,
             content: content,
             writer: "익명",
@@ -51,7 +54,7 @@ function Write(){
                     <img src={line} alt="line" id="title_line"/>
                     <textarea placeholder="내용을 입력하세요" id="new_post_content" form="new_post" onChange={onChangeContent}></textarea>
                     <Link to ="/cummunity" id="box">
-                        <button type="submit" id="submit_new_post" onClick={writeUserData()}>게시하기</button>
+                        <button type="submit" id="submit_new_post" onClick={writeUserData}>게시하기</button>
                     </Link>
                     
                 </form>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useState , useEffect} from "react";
 
 import { firestore } from './firebase';
+import firebase from "firebase/compat/app"
 
 function Cummunity(){
     const [isAllValid,setIsAllVaild] =useState();
@@ -16,26 +17,24 @@ function Cummunity(){
     }
 
     const [user, setUser] = useState([]);
+    const [id, setId] = useState([]);
+    const db = firebase.firestore();
+    const dataCollection = db.collection('Community');
 
     useEffect(() => {
-        const fetchUserData = async () => {
-          try {
-            const userDoc = await firestore.collection('Community').doc("test").get();
-            setUser(userDoc.data());
-
-            console.log(user);
-          } catch (error) {
-            console.error('Error fetching user data:', error);
-          }
+        // 데이터 가져오기
+        const fetchData = async () => {
+          const snapshot = await firebase.firestore().collection('Community').get();
+          const newData = snapshot.docs.map(doc => doc.data());
+          const newId = snapshot.docs.id;
+          setUser(newData);
+          setId(newId);
+          console.log(id);
+        
         };
     
-        fetchUserData();
+        fetchData();
       }, []);
-
-
-     
-
-
 
     
     return(
@@ -54,14 +53,17 @@ function Cummunity(){
             </div>
             <div id="cummunity_main_post">
                 <div id="cummunity_post_box">
-                    <SimplePost title={user.name} author={"익명"} time={"15:43"} count={user.count} like={user.like} reply={user.reply}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
-                    <SimplePost title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} reply={0}/>
+                    {user.map((item) => (
+                        <SimplePost
+                            title={item.name}
+                            author={item.writer}
+                            time={"15:43"}
+                            count={item.count}
+                            like={item.like}
+                            reply={item.reply}
+                            content={item.content}
+                     />
+                ))}
                 </div>
             </div>
             <div id="container_writing_button">
