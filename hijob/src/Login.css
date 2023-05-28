@@ -36,7 +36,11 @@
 }
 
 .login_input_wrap {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.login_input_wrap input {
+  padding-left: 15px;
 }
 .login_input_wrap:first-of-type {
   margin-bottom: 5px;

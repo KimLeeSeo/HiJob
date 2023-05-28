@@ -15,22 +15,22 @@ import Search_result from "./Search_result";
 import Search from "./Search";
 
 import axios from "axios";
-import {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [jobdata,setJobdata] = useState([]);
-  const [data,setData] = useState([]);
-  const readJobdata = async() =>{
-    const {data} = await axios.get("http://localhost:4000/api/jobdata");
+  const [jobdata, setJobdata] = useState([]);
+  const [data, setData] = useState([]);
+  const readJobdata = async () => {
+    const { data } = await axios.get("http://localhost:4000/api/jobdata");
     setJobdata(data);
     setData(data.GlobalJobSearch.row);
   };
-  useEffect(()=>{
-    (async()=>{
+  useEffect(() => {
+    (async () => {
       await readJobdata();
     })();
-  },[]);
- 
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -43,15 +43,14 @@ function App() {
         />
         <Route path="/cummunity_post" Component={Cummunity_post} />
         <Route path="/new_post" Component={Write} />
-        <Route path="/home" Component={Home} data={data}/>
+        <Route path="/home" Component={Home} data={data} />
         <Route path="/resume" Component={Resume} />
         <Route path="/mypage" Component={MyPage} />
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={SignUp} />
         <Route path="/signup2" Component={SignUp2} />
         <Route path="/Search_result" Component={Search_result} />
-        <Route path="/search" Component={Search}/>
-        
+        <Route path="/search" Component={Search} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MenuBar from "./components/MenuBar";
 import "./MyPage.css";
 import bell from "./APP/bell.png";
@@ -77,6 +78,11 @@ export default function MyPage() {
             <img src={mypage8} alt="mypage4" className="block3_img1" />
             <div className="block3_text">버전 정보 v.2.12</div>
           </div>
+        </div>
+        <div className="login_btn_mypage">
+          <Link to="/login">
+            <button className="goto_login">로그인하러 가기</button>
+          </Link>
         </div>
       </div>
       <div className="menu_bar">
