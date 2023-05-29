@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "./CummunityDetailPost.css"
 import chat from "../APP/chat-gray.png";
-import seventeen from "../APP/Seventeen.png";
 import heart from "../APP/heart.png";
 import redheart from "../APP/redheart.png";
 import Reply from "./Reply"
@@ -31,6 +30,8 @@ function CummunityDetailPost(){
         const like = location.state.like;
         const reply = location.state.reply;
         const content = location.state.content;
+        const id = location.state.id;
+
         
         return(
             <div id="detail_post_content">
@@ -74,7 +75,7 @@ function CummunityDetailPost(){
                     <hr className="mainline"/>
                     <div id="replies">
                         <Reply name={"익명"} 
-                        contents={"Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중 Say, say, say, say영웅본색 like this시간과 공간에 구애받지 않는 자세힘을 다하고 쓰러져도포기를 모르고 날뛰는 중 Say, say, say, say영웅본색 like this시간과 공간"} 
+                        contents={"저도 궁금합니다!"} 
                         date={"2023.05.05"} time={"16:18"}/>
                     </div>
                     <hr className="mainline"/>
