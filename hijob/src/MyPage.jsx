@@ -23,7 +23,7 @@ export default function MyPage() {
       <div className="block_1">
         <div className="block_1_1">
           <img src={usericon} alt="userIcon" className="userIconPNG_mypage" />
-          <div className="block_1_text">안녕하세요 이채은님!</div>
+          <div className="block_1_text">안녕하세요 익명님!</div>
           <div className="setting_block1">
             <div className="block_1_setting">
               <img src={setting} alt="setting" className="setting-icon" />
