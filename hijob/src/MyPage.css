@@ -155,3 +155,21 @@
   font-size: 20px;
   margin-left: 10px;
 }
+
+.login_btn_mypage {
+  height: 50px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.goto_login {
+  border-radius: 35px;
+  border: none;
+  width: 210px;
+  height: 50px;
+  background-color: #4399ff;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
