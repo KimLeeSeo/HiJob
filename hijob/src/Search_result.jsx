@@ -24,6 +24,7 @@ export default function Search_result() {
 
     const title = location.state.title;
     const content = location.state.content;
+    const author = location.state.author;
     const [htmlString, setHtmlString] = useState(content);
 
     return (
@@ -48,7 +49,7 @@ export default function Search_result() {
           작성자명
         </h2>
         <h3>
-          서은서
+          {author}
         </h3>
         
         <h2>
