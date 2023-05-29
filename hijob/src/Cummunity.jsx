@@ -11,31 +11,30 @@ import { firestore } from './firebase';
 import firebase from "firebase/compat/app"
 
 function Cummunity(){
-    const [isAllValid,setIsAllVaild] =useState();
     const SelectMenu=()=>{
         
     }
 
     const [user, setUser] = useState([]);
     const [id, setId] = useState([]);
-    const db = firebase.firestore();
-    const dataCollection = db.collection('Community');
 
     useEffect(() => {
-        // 데이터 가져오기
         const fetchData = async () => {
+          //ID 가져오기
           const snapshot = await firebase.firestore().collection('Community').get();
-          const newData = snapshot.docs.map(doc => doc.data());
-          const newId = snapshot.docs.id;
-          setUser(newData);
+          const newId = snapshot.docs.map(doc => doc.id);
           setId(newId);
           console.log(id);
-        
+
+          //Data 가져오기
+          const newData = snapshot.docs.map(doc => doc.data());
+          setUser(newData);
+          
+          console.log(user);
         };
     
         fetchData();
       }, []);
-
     
     return(
         <>
@@ -54,8 +53,8 @@ function Cummunity(){
             <div id="cummunity_main_post">
                 <div id="cummunity_post_box">
                     {user.map((item) => (
-                        <SimplePost
-                            title={item.name}
+                        <SimplePost 
+                            title= {item.name}
                             author={item.writer}
                             time={"15:43"}
                             count={item.count}
