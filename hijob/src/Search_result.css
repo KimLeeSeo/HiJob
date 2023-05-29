@@ -90,6 +90,18 @@
     display: flex;
     right: 0%;
 }
+#resume_link{
+    text-decoration: none;
+    color:white;
+    margin: auto;
+    position:relative;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffff;
+}
 .bar_txt{
     margin: auto;
     position:relative;

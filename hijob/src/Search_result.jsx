@@ -72,7 +72,9 @@ export default function Search_result() {
             <div className='bar_txt'>좋아요</div>
             </div>
           <div className='accept_bar'>
-            <div className='bar_txt'>지원하기</div>
+            <Link to="/resume" id="resume_link">
+              <div className='bar_txt'>지원하기</div>
+            </Link>
           </div>
       </div>
     </div>
