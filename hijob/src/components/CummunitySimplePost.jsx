@@ -3,11 +3,11 @@ import "./CummunitySimplePost.css";
 import { Link } from "react-router-dom";
 
 
-function SimplePost({title,author,time,count,like,reply}){
+function SimplePost({title,author,time,count,like,reply,content,id}){
    
     return(
         <>
-        <Link to="/cummunity_post" state={{title,author,time,count,like,reply}} style={{textDecoration:"none", color:"black"}}>
+        <Link to="/cummunity_post" state={{title,author,time,count,like,reply,content,id}} style={{textDecoration:"none", color:"black"}}>
             <div className="post_container">
                 <div id="text_box">
                     <h2>{title}</h2>
