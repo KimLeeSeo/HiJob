@@ -9,12 +9,12 @@ function Cummunity_post(){
     return(
         <>
         <div id="container">
-             <heaer id="post_header">
+             <header id="post_header">
                 <Link to ="/cummunity" id="box">
                  <img src={arrow} id="arrow"/>
                  <div id="cummunity_button">커뮤니티</div>
                 </Link>
-             </heaer>
+             </header>
 
             <div id="cummunity_datail_post"> 
                     <CummunityDetailPost/>

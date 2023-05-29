@@ -64,6 +64,17 @@
     display:flex;
     justify-content: center;
 }
+#cummunity_button{
+    position:absolute;
+    font-size: 17px;
+    color:white;
+    font-weight: bold;
+    top:51.94px;
+    left:33px;
+    width:76px;
+    border: none;
+    background-color: transparent;
+}
 .like_icon{
     width: 24px;
     height: 24px;

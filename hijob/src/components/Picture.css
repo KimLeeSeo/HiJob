@@ -1,0 +1,15 @@
+#image_box{
+    margin:20px;
+    position:relative;
+    
+}
+#image{
+    width:150px;
+    height:200px;
+    border-radius: 5px;
+}
+#image_btn{
+    position:absolute;
+    left:0px;
+    top:205px;
+}
