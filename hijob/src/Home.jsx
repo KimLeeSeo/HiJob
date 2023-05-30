@@ -1,8 +1,6 @@
 import React, { useDeferredValue } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Router } from "react-router-dom";
-import { firestore } from './firebase';
 import axios from "axios";
 import { useEffect,useState } from 'react';
 import List from "./components/List";
@@ -15,8 +13,10 @@ import 'swiper/css/scrollbar';
 import './Home.css';
 import MenuBar from "./components/MenuBar";
 import SearchBar from "./components/SearchBar";
-import testimg from "./APP/testimage.png";
-import jjang from "./APP/jjang.png";
+
+import back1 from "./APP/back1.png";
+import back2 from "./APP/back2.png";
+import back3 from "./APP/back3.png";
 
 
 
@@ -50,9 +50,9 @@ function Home(){
                     pagination={{ clickable: false }}
                     //</div>scrollbar={{ draggable: true }}
                     >
-                    <SwiperSlide> <img src={testimg} alt="메인이미지" className="main_img"/> </SwiperSlide>
-                    <SwiperSlide> <img src={jjang} alt="메인이미지" className="main_img"/> </SwiperSlide>
-                    <SwiperSlide> <img src={testimg} alt="메인이미지" className="main_img"/> </SwiperSlide>
+                    <SwiperSlide> <img src={back1} alt="메인이미지" className="main_img"/> </SwiperSlide>
+                    <SwiperSlide> <img src={back2} alt="메인이미지" className="main_img"/> </SwiperSlide>
+                    <SwiperSlide> <img src={back3} alt="메인이미지" className="main_img"/> </SwiperSlide>
                 </Swiper>
                 
                 <h1>추천공고</h1>
@@ -69,8 +69,6 @@ function Home(){
                 ))}
                 
             </div>
-
-            <img src={jjang} alt="광고이미지" className="ad_img"/> 
 
             <div className="menu_bar">
                 <MenuBar></MenuBar>

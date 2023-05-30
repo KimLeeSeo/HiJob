@@ -31,10 +31,13 @@ export default function MyPage() {
           </div>
         </div>
         <div className="block_1_2">
-          <div className="btn_block">
+          <Link to="/resume" style={{ textDecoration: "none", color: "black"}}>
+            <div className="btn_block">
             <img src={mypage1} alt="mypage1" className="btn_block_img_1" />
             <div className="btn_block_div_1">이력서</div>
           </div>
+          </Link>
+        
           <div className="btn_block">
             <img src={mypage2} alt="mypage2" className="btn_block_img_2" />
             <div className="btn_block_div_1">지원현황</div>
