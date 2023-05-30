@@ -11,9 +11,6 @@ function Search() {
             <SearchBar></SearchBar>
         </div>
         <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-        <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-        <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
-        <List title={"영상제작 크루 팀원 모집"} author={"익명"} time={"15:43"} count={3} like={19} />
         <div className="menu_bar">
             <MenuBar></MenuBar>
         </div>
