@@ -4,6 +4,8 @@ import heart from "./APP/heart.png";
 import redheart from "./APP/redheart.png";
 import whbell from "./APP/bell.png";
 import { useLocation } from 'react-router-dom';
+import arrow from "./APP/arrow-prev.png";
+import { Link } from 'react-router-dom';
 
 import { useState } from "react";
 
@@ -30,6 +32,12 @@ export default function Search_result() {
     return (
     <div className='search_body'>
       <div className='result_header'>
+      <header id="post_header">
+        <Link to ="/home" id="box">
+          <img src={arrow} id="arrow"/>
+          <div id="cummunity_button">채용정보</div>
+        </Link>
+      </header>
         <img src={whbell} className='bell_icon' id="bell_button"/>
       </div>
       <div className='result_content'>
@@ -64,7 +72,9 @@ export default function Search_result() {
             <div className='bar_txt'>좋아요</div>
             </div>
           <div className='accept_bar'>
-            <div className='bar_txt'>지원하기</div>
+            <Link to="/resume" id="resume_link">
+              <div className='bar_txt'>지원하기</div>
+            </Link>
           </div>
       </div>
     </div>
