@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/HiJob/static/css/main.56ce9916.css",
-    "main.js": "/HiJob/static/js/main.994320ea.js",
-    "static/js/787.32e50458.chunk.js": "/HiJob/static/js/787.32e50458.chunk.js",
-    "static/media/back3.png": "/HiJob/static/media/back3.79e7d0b4757fbe1daba7.png",
-    "static/media/back2.png": "/HiJob/static/media/back2.3bdf500e02bbab8222f9.png",
-    "static/media/back1.png": "/HiJob/static/media/back1.d81ed3f35596f1c84a5b.png",
-    "static/media/userIcon.png": "/HiJob/static/media/userIcon.89b7b4c732932e09ae8c.png",
-    "static/media/profile.png": "/HiJob/static/media/profile.17c7b594bb1244e83f63.png",
-    "static/media/logo.png": "/HiJob/static/media/logo.59c50bd01a160edb104e.png",
-    "index.html": "/HiJob/index.html",
-    "main.56ce9916.css.map": "/HiJob/static/css/main.56ce9916.css.map",
-    "main.994320ea.js.map": "/HiJob/static/js/main.994320ea.js.map",
-    "787.32e50458.chunk.js.map": "/HiJob/static/js/787.32e50458.chunk.js.map"
+    "main.css": "/static/css/main.56ce9916.css",
+    "main.js": "/static/js/main.aefadb8b.js",
+    "static/js/787.32e50458.chunk.js": "/static/js/787.32e50458.chunk.js",
+    "static/media/back3.png": "/static/media/back3.79e7d0b4757fbe1daba7.png",
+    "static/media/back2.png": "/static/media/back2.3bdf500e02bbab8222f9.png",
+    "static/media/back1.png": "/static/media/back1.d81ed3f35596f1c84a5b.png",
+    "static/media/userIcon.png": "/static/media/userIcon.89b7b4c732932e09ae8c.png",
+    "static/media/profile.png": "/static/media/profile.17c7b594bb1244e83f63.png",
+    "static/media/logo.png": "/static/media/logo.59c50bd01a160edb104e.png",
+    "index.html": "/index.html",
+    "main.56ce9916.css.map": "/static/css/main.56ce9916.css.map",
+    "main.aefadb8b.js.map": "/static/js/main.aefadb8b.js.map",
+    "787.32e50458.chunk.js.map": "/static/js/787.32e50458.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56ce9916.css",
-    "static/js/main.994320ea.js"
+    "static/js/main.aefadb8b.js"
   ]
 }
